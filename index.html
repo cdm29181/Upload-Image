@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Ảnh</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-cloud-upload-alt"></i> Upload Ảnh</h1>
+            <p>Kéo thả hoặc click để chọn ảnh</p>
+        </div>
+
+        <div class="main-content">
+            <!-- Cột trái - Phần upload -->
+            <div class="upload-section">
+                <div id="dropZone" class="drop-zone">
+                    <div class="drop-zone-content">
+                        <i class="fas fa-images"></i>
+                        <h3>Kéo thả ảnh vào đây</h3>
+                        <p>hoặc <span class="highlight">click để chọn</span></p>
+                        <div class="supported-formats">
+                            <small>Hỗ trợ: JPG, PNG, GIF, WebP</small>
+                        </div>
+                    </div>
+                    <input type="file" id="fileInput" multiple accept="image/*" hidden>
+                </div>
+
+                <div id="previewContainer" class="preview-container"></div>
+
+                <div class="upload-controls">
+                    <button id="uploadBtn" class="upload-btn">
+                        <i class="fas fa-upload"></i>
+                        <span>Tải lên</span>
+                    </button>
+                </div>
+
+                <div id="progressContainer" class="progress-container" style="display: none;">
+                    <div class="progress-bar-container">
+                        <div id="progressBar" class="progress-bar"></div>
+                    </div>
+                    <div id="progressText" class="progress-text">0%</div>
+                </div>
+            </div>
+
+            <!-- Cột phải - Kết quả -->
+            <div class="results-section">
+                <div class="results-header">
+                    <h2><i class="fas fa-link"></i> Kết quả</h2>
+                </div>
+                <div id="uploadStatus" class="upload-status-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>
+                <i class="fas fa-heart"></i> 
+                API được cung cấp bởi 
+                <a href="https://awsv3.namrx.xyz" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-cloud"></i> NAMRX.XYZ
+                </a>
+            </p>
+            <p class="footer-note">
+                <i class="fas fa-code"></i> 
+                Được phát triển với mục đích học tập
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
